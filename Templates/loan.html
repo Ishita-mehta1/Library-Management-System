@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issued Books</title>
+</head>
+<body>
+
+<h1>Issued Books</h1>
+
+<table border="1">
+<tr>
+    <th>Loan ID</th>
+    <th>Book ID</th>
+    <th>Member ID</th>
+    <th>Issue Date</th>
+    <th>Due Date</th>
+    <th>Return</th>
+</tr>
+
+{% for loan in loans %}
+<tr>
+    <td>{{ loan.id }}</td>
+    <td>{{ loan.book_id }}</td>
+    <td>{{ loan.member_id }}</td>
+    <td>{{ loan.issue_date }}</td>
+    <td>{{ loan.due_date }}</td>
+
+    <td>
+        {% if not loan.return_date %}
+        <a href="/return_book/{{ loan.id }}">Return Book</a>
+        {% else %}
+        Returned
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Back</a>
+
+</body>
+</html>

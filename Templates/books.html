@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        h1 {
+            margin-top: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .form-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #185a9d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #0f3d6e;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #185a9d;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #185a9d;
+            font-weight: bold;
+        }
+
+        .back {
+            margin-top: 20px;
+            display: inline-block;
+            color: white;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Books Management</h1>
+
+<div class="container">
+
+    <div class="form-box">
+        <form action="/add_book" method="POST">
+            <input type="text" name="title" placeholder="Book Title" required>
+            <input type="number" name="price" placeholder="Price" required>
+            <input type="number" name="copies" placeholder="Copies" required>
+            <input type="text" name="ebook" placeholder="Ebook Link">
+            <button type="submit">Add Book</button>
+        </form>
+        <form action="/search_book" method="GET">
+    <input
+        type="text"
+        name="query"
+        placeholder="Search by title"
+        value="{{ search_query if search_query else '' }}"
+    >
+    <button type="submit">Search</button>
+    <a href="/books">Show All</a>
+</form>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Copies</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for book in books %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+            <td>{{ book.copies }}</td>
+            <td><a href="/delete_book/{{book.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a class="back" href="/">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

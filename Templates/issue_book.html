@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue Book</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #36d1dc, #5b86e5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        h1 {
+            margin-top: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .form-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4a6cf7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2f4fd1;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Issue Book</h1>
+
+<div class="container">
+
+    <div class="form-box">
+
+        <form action="/issue_book" method="POST">
+
+            <label>Select Book</label>
+            <select name="book_id" required>
+                {% for book in books %}
+                <option value="{{book.id}}">
+                    {{book.title}}
+                </option>
+                {% endfor %}
+            </select>
+
+            <label>Select Member</label>
+            <select name="member_id" required>
+                {% for member in members %}
+                <option value="{{member.id}}">
+                    {{member.name}}
+                </option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Issue Book</button>
+
+        </form>
+
+    </div>
+
+    <a href="/">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

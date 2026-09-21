@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            background: white;
+            color: black;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #4a6cf7;
+            color: white;
+        }
+
+        a {
+            padding: 6px 10px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background: #1e7e34;
+        }
+
+        .back {
+            margin-top: 20px;
+            display: inline-block;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Return Book System</h1>
+
+<div class="container">
+
+<table>
+    <tr>
+        <th>Loan ID</th>
+        <th>Book ID</th>
+        <th>Member ID</th>
+        <th>Issue Date</th>
+        <th>Due Date</th>
+        <th>Action</th>
+    </tr>
+
+    {% for loan in loans %}
+    <tr>
+        <td>{{ loan.id }}</td>
+        <td>{{ loan.book_id }}</td>
+        <td>{{ loan.member_id }}</td>
+        <td>{{ loan.issue_date }}</td>
+        <td>{{ loan.due_date }}</td>
+
+        <td>
+            <a href="/return_book/{{ loan.id }}">Return</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a class="back" href="/">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
