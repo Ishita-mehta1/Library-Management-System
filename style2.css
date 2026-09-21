@@ -1,0 +1,29 @@
+body{
+    font-family: Arial;
+    margin:20px;
+}
+
+h1{
+    color:darkblue;
+}
+
+nav a{
+    margin-right:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
+
+button{
+    padding:8px 15px;
+    cursor:pointer;
+}

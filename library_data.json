@@ -1,0 +1,199 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "Python",
+            "price": 299.0,
+            "copies": 8,
+            "ebook": "https://thepythoncode.com/article/extract-pdf-links-with-python"
+        },
+        {
+            "id": 2,
+            "title": "Data structure",
+            "price": 199.0,
+            "copies": 4,
+            "ebook": "https://thepythoncode.com/article/extract-pdf-links-with-python"
+        },
+        {
+            "id": 3,
+            "title": "data base",
+            "price": 120.0,
+            "copies": 5,
+            "ebook": "https://thepythoncode.com/article/extract-pdf-links-with-python"
+        }
+    ],
+    "members": [
+        {
+            "id": 1,
+            "name": "SUMIT",
+            "email": "sumit@gmail.com",
+            "phone": "9876543210"
+        },
+        {
+            "id": 2,
+            "name": "ashi gupta",
+            "email": "guptaashi042@gmail.com",
+            "phone": "9012669092"
+        },
+        {
+            "id": 3,
+            "name": "Ishita",
+            "email": "ishitamehta@gmail.com",
+            "phone": "6537946847489"
+        }
+    ],
+    "loans": [
+        {
+            "id": 1,
+            "book_id": 1,
+            "member_id": 2,
+            "issue_date": "2026-05-31 12:49:49.935484",
+            "due_date": "2026-06-07 12:49:49.935484",
+            "return_date": "2026-05-31 15:44:01.867298"
+        },
+        {
+            "id": 2,
+            "book_id": 3,
+            "member_id": 2,
+            "issue_date": "2026-05-31 13:16:29.786246",
+            "due_date": "2026-06-07 13:16:29.786246",
+            "return_date": "2026-05-31 15:44:03.431210"
+        },
+        {
+            "id": 3,
+            "book_id": 2,
+            "member_id": 2,
+            "issue_date": "2026-05-31 13:24:17.579240",
+            "due_date": "2026-06-07 13:24:17.579240",
+            "return_date": "2026-06-07 13:24:17.579240"
+        },
+        {
+            "id": 4,
+            "book_id": 3,
+            "member_id": 2,
+            "issue_date": "2026-05-31 13:30:59.655380",
+            "due_date": "2026-06-07 13:30:59.655380",
+            "return_date": "2026-06-07 13:30:59.655380"
+        },
+        {
+            "id": 5,
+            "book_id": 3,
+            "member_id": 2,
+            "issue_date": "2026-05-31 13:48:33.795540",
+            "due_date": "2026-06-07 13:48:33.795540",
+            "return_date": "2026-06-07 13:48:33.795540"
+        },
+        {
+            "id": 6,
+            "book_id": 2,
+            "member_id": 1,
+            "issue_date": "2026-05-31 13:54:20.430372",
+            "due_date": "2026-06-07 13:54:20.430372",
+            "return_date": "2026-06-07 13:54:20.430372"
+        },
+        {
+            "id": 7,
+            "book_id": 1,
+            "member_id": 1,
+            "issue_date": "2026-05-31 14:08:37.176103",
+            "due_date": "2026-06-07 14:08:37.176103",
+            "return_date": "2026-05-31 16:18:28.268981"
+        },
+        {
+            "id": 8,
+            "book_id": 1,
+            "member_id": 1,
+            "issue_date": "2026-05-31 14:08:45.244491",
+            "due_date": "2026-06-07 14:08:45.244491",
+            "return_date": "2026-05-31 16:18:29.252222"
+        },
+        {
+            "id": 9,
+            "book_id": 2,
+            "member_id": 1,
+            "issue_date": "2026-05-31 14:42:54.304684",
+            "due_date": "2026-06-07 14:42:54.304684",
+            "return_date": "2026-05-31 16:18:29.792019"
+        },
+        {
+            "id": 10,
+            "book_id": 3,
+            "member_id": 1,
+            "issue_date": "2026-05-31 14:43:03.277497",
+            "due_date": "2026-06-07 14:43:03.277497",
+            "return_date": "2026-05-31 16:18:29.967501"
+        },
+        {
+            "id": 11,
+            "book_id": 1,
+            "member_id": 1,
+            "issue_date": "2026-05-31 14:45:56.597404",
+            "due_date": "2026-06-07 14:45:56.597404",
+            "return_date": "2026-05-31 16:18:30.288647"
+        },
+        {
+            "id": 12,
+            "book_id": 1,
+            "member_id": 2,
+            "issue_date": "2026-05-31 14:46:05.766649",
+            "due_date": "2026-06-07 14:46:05.766649",
+            "return_date": "2026-05-31 16:18:30.608070"
+        },
+        {
+            "id": 13,
+            "book_id": 1,
+            "member_id": 2,
+            "issue_date": "2026-05-31 16:23:51.576752",
+            "due_date": "2026-06-07 16:23:51.576752",
+            "return_date": "2026-05-31 16:26:25.483847"
+        },
+        {
+            "id": 14,
+            "book_id": 1,
+            "member_id": 2,
+            "issue_date": "2026-06-01 09:15:42.493982",
+            "due_date": "2026-06-08 09:15:42.493982",
+            "return_date": "2026-06-01 09:16:09.370815"
+        },
+        {
+            "id": 15,
+            "book_id": 2,
+            "member_id": 1,
+            "issue_date": "2026-06-01 09:16:50.627801",
+            "due_date": "2026-06-08 09:16:50.627801",
+            "return_date": null
+        },
+        {
+            "id": 16,
+            "book_id": 1,
+            "member_id": 1,
+            "issue_date": "2026-06-01 09:19:07.117037",
+            "due_date": "2026-06-08 09:19:07.117037",
+            "return_date": null
+        },
+        {
+            "id": 17,
+            "book_id": 1,
+            "member_id": 1,
+            "issue_date": "2026-06-01 09:26:54.412372",
+            "due_date": "2026-06-08 09:26:54.412372",
+            "return_date": null
+        },
+        {
+            "id": 18,
+            "book_id": 1,
+            "member_id": 1,
+            "issue_date": "2026-06-01 10:35:12.791595",
+            "due_date": "2026-06-08 10:35:12.791595",
+            "return_date": null
+        },
+        {
+            "id": 19,
+            "book_id": 2,
+            "member_id": 3,
+            "issue_date": "2026-06-01 10:57:44.554267",
+            "due_date": "2026-06-08 10:57:44.554267",
+            "return_date": null
+        }
+    ]
+}
